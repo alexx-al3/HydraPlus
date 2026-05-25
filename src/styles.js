@@ -446,4 +446,27 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--t1);oversc
 @keyframes zzzFloat{0%,100%{transform:translateY(0) rotate(-5deg);opacity:.72}50%{transform:translateY(-9px) rotate(5deg);opacity:1}}
 .sweat{position:absolute;top:0;right:-15px;font-size:17px;z-index:10;animation:sweatDrop 1.05s ease-in infinite}
 @keyframes sweatDrop{0%{transform:translateY(0);opacity:1}100%{transform:translateY(22px);opacity:0}}
+
+/* ── Tama sprite animations ── */
+.tama-wrapper{display:inline-flex;align-items:center;justify-content:center;position:relative}
+.tama-bounce{animation:tamaBounce .65s ease-in-out infinite}
+.tama-float{animation:tamaFloat 3s ease-in-out infinite}
+.tama-droop{animation:tamaDroop 2s ease-in-out infinite}
+.tama-shake{animation:tamaShake .3s ease-in-out infinite}
+@keyframes tamaBounce{0%,100%{transform:translateY(0) rotate(-2deg) scale(1.02)}50%{transform:translateY(-14px) rotate(2deg) scale(1.07)}}
+@keyframes tamaFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-6px) scale(1.02)}}
+@keyframes tamaDroop{0%,100%{transform:translateY(0) rotate(-1deg) scale(.97)}50%{transform:translateY(5px) rotate(1deg) scale(.96)}}
+@keyframes tamaShake{0%,100%{transform:translateX(0) scale(.93)}33%{transform:translateX(-5px) scale(.92)}66%{transform:translateX(5px) scale(.92)}}
+.tama-glow-ring{position:absolute;border-radius:50%;border:3px solid rgba(0,212,255,.5);animation:glowRing 1.2s ease-out infinite;pointer-events:none;z-index:10}
+@keyframes glowRing{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.6);opacity:0}}
+.tama-star{position:absolute;font-size:14px;pointer-events:none;z-index:11;animation:tamaStarPop 1.4s ease-in-out infinite}
+.ts1{top:-12px;right:-10px;animation-delay:0s}
+.ts2{top:4px;left:-16px;animation-delay:.5s}
+.ts3{bottom:-4px;right:-16px;animation-delay:.9s}
+@keyframes tamaStarPop{0%,100%{transform:scale(.6) rotate(0);opacity:.5}50%{transform:scale(1.3) rotate(180deg);opacity:1}}
+.tama-sweat{position:absolute;top:2px;right:-12px;font-size:14px;z-index:11;animation:sweatAnim 1s ease-in infinite}
+@keyframes sweatAnim{0%{transform:translateY(0);opacity:1}100%{transform:translateY(18px);opacity:0}}
+.tama-warn{position:absolute;top:-8px;left:50%;transform:translateX(-50%);font-size:16px;font-weight:900;color:#f87171;z-index:11;animation:warnPulse .4s ease-in-out infinite alternate}
+@keyframes warnPulse{from{opacity:.5;transform:translateX(-50%) scale(.8)}to{opacity:1;transform:translateX(-50%) scale(1.1)}}
+
 `
